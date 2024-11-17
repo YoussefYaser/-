@@ -1,0 +1,263 @@
+body {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  padding: 7rem 0 0 0;
+}
+
+body > div{
+  background-color: #fff !important;
+}
+
+:root {
+  --primary: hsl(184, 9%, 55%);
+  --greyLight: hsl(184, 9%, 40%);
+  --greyLight-2: #cbe0dd;
+  --greyDark: #2d4848;
+}
+
+body>div>ul>li.table-header {
+  font-weight: 800;
+  font-size: large;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+h2 small {
+  font-size: 0.5em;
+}
+
+nav{
+  background-color: #EFEFEF !important;
+  box-shadow: 0 0 10px 10px rgb(219, 219, 219);
+}
+
+nav li a{
+  color: #000 !important;
+}
+
+nav .container .links ul li a::after {
+  content: '\f0eb';
+  font-family: 'Font Awesome 6 Free';
+  color: gold;
+  margin-right: 0.5rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+nav #burger-bar span{
+  border-color: #000 !important;
+}
+
+.responsive-table li {
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.responsive-table .table-header {
+  background-color: #95A5A6;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.responsive-table .table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-table .col{
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #ddd; 
+}
+.responsive-table .col:first-child {
+  border-right: none;
+}
+
+.responsive-table .table-row .col-1{
+  background-color: #CCC;
+}
+
+@media(min-width : 768px){
+  .responsive-table .table-row .col-1{
+    background-color: transparent;
+  }
+
+}
+
+.responsive-table .col-1 {
+  flex-basis: 10%;
+}
+
+.responsive-table .col-2 {
+  flex-basis: 60%;
+}
+
+.responsive-table .col-3 {
+  flex-basis: 25%;
+}
+
+.responsive-table .col-4 {
+  flex-basis: 25%;
+}
+
+@media all and (max-width: 767px) {
+  .responsive-table .table-header {
+    display: none;
+  }
+
+  .responsive-table li {
+    display: block;
+  }
+
+  .responsive-table .col {
+    flex-basis: 100%;
+    display: flex;
+    padding: 10px 0;
+  }
+
+  .responsive-table .col:before {
+    color: #6C7A89;
+    padding-right: 10px;
+    content: attr(data-label);
+    flex-basis: 50%;
+    text-align: right;
+  }
+}
+
+.table-row {
+  transition: color 0.3s ease-out ; 
+}
+
+.table-row:hover .col {
+  color: #23adad; 
+}
+
+/* pagination */
+
+ul {
+  list-style-type: none;
+}
+
+.items-list {
+  max-width: 90vw;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3rem;
+  justify-content: center;
+  align-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .items-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--greyDark);
+  cursor: pointer;
+}
+
+.item span {
+  background: #ffffff;
+  box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+  border-radius: 0.6rem;
+  padding: 2rem;
+  font-size: 3rem;
+  transition: all 0.3s ease;
+}
+
+.item:hover span {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+
+.item p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--greyLight);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  margin: 1rem;
+  padding: 0;
+  border-radius: 0.6rem;
+  background: #ffffff;
+  box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+}
+
+.page__numbers,
+.page__btn,
+.page__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.page__dots {
+  width: 2.6rem;
+  height: 2.6rem;
+  color: var(--greyLight);
+  cursor: initial;
+}
+
+.page__numbers {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.4rem;
+}
+
+.page__numbers:hover {
+  color: var(--primary);
+}
+
+.page__numbers.active {
+  color: #ffffff;
+  background: var(--primary);
+  font-weight: 600;
+  border: 1px solid var(--primary);
+}
+
+.page__btn {
+  color: var(--greyLight);
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.page__btn.active {
+  color: var(--greyDark);
+  pointer-events: initial;
+}
+
+.page__btn.active:hover {
+  color: var(--primary);
+}
