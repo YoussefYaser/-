@@ -1,0 +1,62 @@
+/* start contactUs */
+.list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.list-cards li .inner {
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.list-cards li {
+    flex-basis: 50%;
+    padding: 0.5rem;
+}
+
+.FAQs main,
+.contactUs main {
+    padding-top: 6.5625rem;
+    background-image: linear-gradient(#00000040, #000),
+        url('../src//assets/re1.webp');
+    background-size: cover;
+}
+
+.FAQs .page-box,
+.contactUs .page-box {
+    background-color: #ffffff57;
+    backdrop-filter: blur(10px);
+}
+
+.system-seven .list-cards li {
+    flex-basis: 100%;
+}
+
+@media(min-width : 768px) {
+    .system-seven .list-cards li {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+.system-seven .list-cards li .inner {
+    border-color: #383838;
+    background-color: #CCCCCC;
+    box-shadow: 0 0 5px 0 #ccc;
+    border-radius: 4px;
+}
+
+.system-seven .list-cards li span:nth-of-type(1) {
+    font-size: 2rem;
+}
+
+.system-seven .list-cards li p {
+    color: #383838;
+}
+/* end contactUs */

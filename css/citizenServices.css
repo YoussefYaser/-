@@ -1,0 +1,177 @@
+
+body {
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+body>div {
+    background-color: #fff !important;
+}
+
+nav {
+    background-color: #EFEFEF !important;
+    box-shadow: 0 0 10px 10px rgb(219, 219, 219);
+}
+
+nav li a {
+    color: #000 !important;
+}
+
+nav .container .links ul li a::after {
+    content: '\f0eb';
+    font-family: 'Font Awesome 6 Free';
+    color: gold;
+    margin-right: 0.5rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+nav #burger-bar span {
+    border-color: #000 !important;
+}
+
+table {
+    /* border-collapse: collapse; */
+    width: 80vw;
+    background-color: #fff;
+    border: 2px solid gray;
+    border-radius: 8px;
+}
+
+.view {
+    background-color: #EFEFEF;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+}
+
+
+th {
+    background-color: #95A5A6;
+    color: white;
+    border: none;
+}
+
+th:first-child {
+    border-top-right-radius: 8px;
+}
+
+th:last-child {
+    border-top-left-radius: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.responsive {
+    font-family: "Noto Kufi Arabic", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 7rem 0 0 0;
+}
+
+.page-box {
+    padding: 0 !important;
+}
+
+
+/* pagination bar */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid #95A5A6;
+    color: #263238;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #95A5A6;
+    color: white;
+}
+
+.pagination button.active {
+    background-color: #95A5A6;
+    color: white;
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    border-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-items: center;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+
+.table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .view {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+}
+
+@media (max-width: 480px) {
+
+    #comparisonTable th,
+    #comparisonTable td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+
+#comparisonTable {
+    min-width: 600px;
+}
+
+.table {
+    max-height: 300px;
+    overflow-y: scroll;
+
+}
+
+.table::-webkit-scrollbar {
+    display: none;
+}
+
+tbody>tr>td {
+    vertical-align: top;
+}
+
+/* customise width of columns */
+.table tr th:first-child,
+.table tr td:first-child {
+    width: 124px;
+}

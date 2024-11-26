@@ -1,0 +1,150 @@
+/* start registeration & email */
+
+.registeration,
+.email {
+    min-height: 100vh;
+}
+
+.registeration .head,
+.email .head {
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.registeration .head::before,
+.email .head::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    border: 1.5px solid;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.registeration .head h1,
+.email .head h1 {
+    width: 70%;
+    font-size: 1rem;
+}
+
+.registeration .logo img,
+.email .logo img {
+    width: 60px;
+}
+
+@media(min-width : 640px) {
+
+    .registeration .head h1,
+    .email .head h1 {
+        font-size: 1.5rem;
+    }
+
+    .registeration .logo img,
+    .email .logo img {
+        width: 90px;
+    }
+}
+
+.registeration .content,
+.email .content {
+    padding: 3rem 0;
+}
+
+.registeration .content h2,
+.email .content h2 {
+    font-size: 1.2rem;
+    background-color: #dadada7a;
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px 0 #ccc;
+}
+
+.registeration .content p {
+    margin-bottom: 2rem;
+    color: #383838;
+}
+
+.registeration .content p a {
+    color: red;
+    font-weight: 700;
+}
+
+.registeration .content div {
+    margin-right: auto;
+}
+
+.registeration .content h3,
+.email .content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.registeration .content h4 {
+    color: #383838;
+    margin: 0;
+    font-size: 1rem;
+}
+
+@media(min-width : 640px) {
+
+    .registeration .content h2,
+    .email .content h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .registeration .content h3,
+    .email .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .registeration .content h4 {
+        font-size: 1.2rem;
+    }
+}
+
+.registeration .tail,
+.email .tail {
+    font-weight: 700;
+    font-size: 2rem;
+    border-top: 2px solid;
+    padding-top: 2rem;
+}
+
+.registeration .tail img,
+.email .tail img {
+    width: 45px;
+}
+
+.registeration .tail p,
+.email .tail p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.email .content .green {
+    color: green;
+    font-weight: 700;
+}
+
+.email .content div {
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: auto;
+}
+
+.email .content div p:last-child {
+    border-top: 2px solid;
+    margin: 0;
+    padding: 1rem;
+}
+
+.email .content label {
+    font-size: 1.2rem;
+}
+
+/* end registeration & email */

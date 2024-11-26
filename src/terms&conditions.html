@@ -6,942 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الشروط و الاحكام</title>
 
+    <!-- start google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- end google fonts -->
 
     <!-- start font awesome -->
     <link rel="stylesheet" href="../css/all.min.css">
     <!-- end font awesome -->
 
-    <!-- <link rel="stylesheet" href="../css/main.css"> -->
-
-    <style>
-        .arrow-up {
-            width: 40px;
-            height: 40px;
-            background-color: black;
-            color: #fff;
-            border-radius: 50%;
-            position: fixed;
-            bottom: 15px;
-            left: 15px;
-            z-index: 99999;
-            border: 2px solid #ececec;
-            transition: 0.3s;
-            box-shadow: 0 0 10px 0 gray;
-        }
-
-        .arrow-up:hover {
-            transform: scale(1.1);
-        }
-
-        .arrow-up .fa-arrow-up {
-            position: relative;
-        }
-
-        .arrow-up:hover .fa-arrow-up {
-            top: 5px;
-            animation-name: up;
-            animation-duration: 0.7s;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes up {
-            100% {
-                top: -5px;
-            }
-        }
-
-        body {
-            margin: 0;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            scroll-padding-top: 6.5625rem;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            margin-top: 0;
-        }
-
-        :root {
-            font-family: "Noto Kufi Arabic", sans-serif !important;
-            --default-padding: 1.5rem;
-            direction: rtl;
-            --bg-gray1: #777777;
-        }
-
-        /*start custom classes */
-
-        .container {
-            margin: auto;
-            padding: 0rem calc(var(--default-padding) / 2);
-        }
-
-        @media(min-width : 640px) {
-            .container {
-                max-width: 640px;
-            }
-        }
-
-        @media(min-width : 768px) {
-            .container {
-                max-width: 768px;
-            }
-        }
-
-        @media(min-width : 1024px) {
-            .container {
-                max-width: 1024px;
-            }
-        }
-
-        @media(min-width : 1280x) {
-            .container {
-                max-width: 1280px;
-            }
-        }
-
-        .w-100 {
-            width: 100%;
-        }
-
-        .w-fit {
-            width: fit-content;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .no-decoration {
-            text-decoration: none;
-            color: #000;
-        }
-
-        .overflow-hidden {
-            overflow: hidden;
-        }
-
-        .list-unstyled {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .pointer {
-            cursor: pointer;
-        }
-
-        .specical-heading {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: calc(-1*var(--default-padding)) calc(var(--default-padding) / -2) 0rem calc(var(--default-padding) / -2);
-            justify-content: center;
-        }
-
-        .row>* {
-            padding: 0 calc(var(--default-padding) / 2);
-            margin-top: var(--default-padding);
-        }
-
-        .xy-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* end custom classes */
-
-        body>div {
-            background-color: #cccccc52;
-        }
-
-        .page-box>section {
-            padding: 1rem 0;
-        }
-
-        .main-content {
-            padding: 3rem 0;
-        }
-
-        .page-box {
-            border-radius: 1rem;
-            background-color: #fff;
-            padding: 1rem;
-        }
-
-        /* start conditions */
-
-        .conditions .page-box>section {
-            border-bottom: 2px solid black;
-        }
-
-        .conditions .page-box>section>h3 {
-            color: var(--bg-gray1);
-        }
-
-        .conditions .about {
-            /* height: 100vh; */
-            background: linear-gradient(#000000a0, #000),
-                url('../assets/الرفع\ المساحي.jpg');
-            background-size: cover;
-            color: #fff;
-            padding: 6.5625rem 0 2rem;
-        }
-
-        .conditions .about .container>p {
-            font-weight: 300;
-            margin: auto;
-        }
-
-        @media(min-width : 500px) {
-            .conditions .about .container>p {
-                width: 60%;
-            }
-        }
-
-        .list-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .list-cards li {
-            flex-basis: 50%;
-            padding: 0.5rem;
-        }
-
-        .list-cards li .inner {
-            height: 100%;
-            border: 2px solid #fff;
-            border-radius: 1rem;
-            padding: 0.5rem;
-            display: flex;
-            flex-direction: column;
-            transition: 0.3s;
-        }
-
-        .list-cards li .inner a {
-            color: #fff;
-            transition: 0.3s;
-        }
-
-        .list-cards li .inner:hover {
-            background-color: #fff;
-        }
-
-        .list-cards li .inner:hover a {
-            color: #000;
-        }
-
-        .list-cards li .inner span {
-            font-size: 1.5rem;
-        }
-
-        @media(min-width : 480px) {
-            .list-cards li {
-                flex-basis: calc(100% / 3);
-            }
-        }
-
-        @media(min-width : 600px) {
-            .list-cards li {
-                flex-basis: calc(100% / 4);
-            }
-        }
-
-        @media(min-width : 1024px) {
-            .conditions .about {
-                height: 100vh;
-            }
-        }
-
-        /* start system */
-
-        .conditions .system>div {
-            margin-bottom: 2rem;
-        }
-
-        .conditions .container>h2 {
-            font-weight: 300;
-        }
-
-        .conditions .page-box .system h4 {
-            font-size: 1rem;
-            color: #383838;
-        }
-
-        .conditions .page-box .system h4 span {
-            font-size: 1.5rem;
-            color: #000;
-        }
-
-        .conditions .about .container>p {
-            color: #e6e6e6;
-        }
-
-        @media(min-width : 640px) {
-            .conditions .about .container>p {
-                width: 60%;
-            }
-        }
-
-        .conditions .system .tabs>.controls {
-            width: fit-content;
-            display: flex;
-            margin: 0 auto 1rem;
-        }
-
-        .conditions .system .tabs>.controls li {
-            width: 4.7rem;
-            margin: 0 0.5rem;
-            background-color: #8d8d8d;
-            color: #fff;
-            padding: 0.5rem;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .conditions .system .tabs>.controls li:hover,
-        .conditions .system .tabs>.controls li.active {
-            background-color: #009EF7;
-            transform: scale(1.2);
-        }
-
-        .conditions .system .tabs .tabs-content {
-            position: relative;
-            border: 3px solid rgb(87, 87, 87);
-            border-radius: 8px;
-            box-shadow: 0 0 5px 0 #ccc;
-        }
-
-        .conditions .system .tabs .tabs-content>div {
-            padding: 1rem;
-            transition: 0.3s;
-        }
-
-        .conditions .system .tabs .tabs-content>div:nth-child(1) {
-            position: relative;
-        }
-
-        .conditions .system .tabs .tabs-content li {
-            margin-bottom: 1rem;
-        }
-
-        .conditions .system .tabs .tabs-content>div:nth-child(2) {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .system-second>p:nth-of-type(1) {
-            color: #616161;
-        }
-
-        .system-second .inner img {
-            width: 100%;
-            aspect-ratio: 800 / 449;
-            display: block;
-            transition: 0.5s;
-        }
-
-        .system-second .inner>div {
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-
-        .system-second .inner>div:hover img {
-            transform: scale(1.1);
-        }
-
-        .system-second .inner h5 {
-            font-size: 1.2rem;
-            margin-bottom: 0;
-        }
-
-        .system-second .inner {
-            flex-basis: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            background: linear-gradient(150deg, #dfdfdf, #f5f5f573);
-            border-radius: 8px;
-            position: relative;
-            padding: 0.5rem;
-            box-shadow: 0 0 2px 0 rgb(231, 231, 231);
-            transition: 0.3s;
-        }
-
-        .system-second .inner:hover {
-            transform: scale(1.05);
-            background: linear-gradient(150deg, #dfdfdf00, #f5f5f500);
-            background-color: #616161;
-            color: #fff;
-            border-radius: 20px;
-            box-shadow: 0px 0 20px 5px #a3a3a3;
-        }
-
-        .system-second .inner table {
-            width: 100%;
-            font-size: 0.85rem;
-        }
-
-        .system-second .inner table tbody {
-            color: #616161;
-            transition: 0.3s;
-        }
-
-        .system-second .inner:hover table tbody {
-            color: #fff;
-        }
-
-        .system-second .row {
-            margin-bottom: 2rem;
-        }
-
-        @media(min-width : 768px) {
-            .system-second .inner {
-                padding: 1rem;
-            }
-
-            .system-second .row>div {
-                flex-basis: 50%;
-            }
-        }
-
-        .system-second>p:nth-of-type(2) {
-            font-weight: 700;
-            position: relative;
-        }
-
-        .system-second>p:nth-of-type(2)::before {
-            content: '';
-            width: 30%;
-            position: absolute;
-            border: 1px solid var(--bg-gray1);
-            border-radius: 50px;
-            top: 105%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .conditions .system .system-third ul li {
-            color: #616161;
-            margin-bottom: 1rem;
-        }
-
-        .conditions .system .system-four .row {
-            justify-content: center;
-        }
-
-        .conditions .system .system-four .row .logo {
-            width: 40%;
-        }
-
-        .conditions .system .system-four .row .logo img {
-            width: 100%;
-        }
-
-        .conditions .system .system-four .row>div:nth-of-type(1) {
-            color: #616161;
-            margin-top: 0;
-        }
-
-        @media(min-width : 768px) {
-            .conditions .system .system-four .row {
-                justify-content: space-between;
-            }
-
-            .conditions .system .system-four .row>div:nth-of-type(1) {
-                width: calc(100% - 40%);
-            }
-
-            .conditions .system .system-four .row .logo {
-                width: 25%;
-            }
-        }
-
-        .conditions .system .system-five ol li span {
-            margin: 0 0.5rem 0 0.25rem;
-        }
-
-        .conditions .system .system-five ol li:nth-of-type(1) span {
-            color: #FFC700;
-        }
-
-        .conditions .system .system-five ol li:nth-of-type(2) span {
-            color: #47c47f;
-        }
-
-        .conditions .system .system-five ol li:nth-of-type(3) span {
-            color: #F1416C;
-        }
-
-        .conditions .system .system-five ol li:nth-of-type(4) span {
-            color: #009EF7;
-        }
-
-        .conditions .system .system-five ol li {
-            margin-bottom: 1rem;
-        }
-
-        .conditions .system .system-five ol li p {
-            display: inline;
-            margin-bottom: 0;
-        }
-
-        .conditions .system .system-six ul li {
-            color: #616161;
-            margin-bottom: 1rem;
-        }
-
-        .system-seven .list-cards li {
-            flex-basis: 100%;
-        }
-
-        @media(min-width : 768px) {
-            .system-seven .list-cards li {
-                flex-basis: calc(100% / 3);
-            }
-        }
-
-        .system-seven .list-cards li .inner {
-            border-color: #383838;
-            background-color: #CCCCCC;
-            box-shadow: 0 0 5px 0 #ccc;
-            border-radius: 4px;
-        }
-
-        .system-seven .list-cards li span:nth-of-type(1) {
-            font-size: 2rem;
-        }
-
-        .system-seven .list-cards li p {
-            color: #383838;
-        }
-
-        /* end system */
-
-        /* start taxes */
-
-        .conditions .taxes>ul {
-            background-image: linear-gradient(#00000064, #00000087),
-                url('../assets/رفع\ مساحي.webp');
-            background-size: cover;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            color: #fff;
-        }
-
-        .conditions .taxes>ul>div {
-            backdrop-filter: blur(2px);
-            padding: 1rem;
-        }
-
-        .conditions .taxes>ul li {
-            margin-bottom: 3rem;
-        }
-
-        /* end taxes */
-
-        /* end conditions */
-
-        /* start nav */
-
-        nav {
-            width: 100%;
-            padding: 0.5rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 99999;
-            transition: 0.3s;
-        }
-
-        nav .logo img {
-            width: 85px;
-        }
-
-        nav .container,
-        nav .container .links {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        nav .container .box {
-            width: 100%;
-            height: 0;
-            position: absolute;
-            background-color: #ffffff7d;
-            backdrop-filter: blur(10px);
-            top: 100%;
-            left: 0;
-            z-index: 999999;
-            border-radius: 0 0 16px 16px;
-            transition: 0.3s;
-        }
-
-        nav .container .box>div {
-            padding: 1rem var(--default-padding);
-        }
-
-        nav .container .logo {
-            margin-left: 1rem;
-        }
-
-        nav .container .links ul {
-            margin: 0 auto 1rem;
-        }
-
-        nav .container .links ul li a {
-            display: inline-block;
-            padding: 0.5rem;
-            border-radius: 8px;
-            transition: 0.3s;
-            border: 2px solid transparent;
-        }
-
-        nav .container .links ul li a::after {
-            content: '\f0eb';
-            font-family: 'Font Awesome 6 Free';
-            color: gold;
-            margin-right: 0.5rem;
-            opacity: 0;
-            transition: 0.3s;
-        }
-
-        nav .container .links ul li:hover a::after,
-        nav .container .links ul li a.active::after {
-            opacity: 1;
-        }
-
-        nav .container .buttons {
-            margin: auto;
-        }
-
-        nav .container .buttons button {
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 5px 0 #ccc;
-            transition: 0.3s;
-            margin: 0 0.25rem;
-            font-family: "Noto Kufi Arabic", sans-serif !important;
-        }
-
-        nav .container .buttons button:hover {
-            background-color: #000;
-        }
-
-        nav .container .buttons button:hover a {
-            color: #fff;
-        }
-
-        #burger-toggler {
-            padding: 8px;
-            border-radius: 5px;
-            cursor: pointer;
-            border: none;
-            background-color: transparent;
-        }
-
-        #burger-toggler div {
-            --toggler-width: 1.5625rem;
-            /*25px*/
-            --toggler-height: var(--toggler-width);
-            --toggler-bg: rgba(0, 128, 0, 0);
-            --bar-transition: 0.3s;
-            --bar-height: 0.125rem;
-            /*2px*/
-            /* ----------------------------------------------- */
-            width: var(--toggler-width);
-            height: var(--toggler-height);
-            background-color: var(--toggler-bg);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-        }
-
-
-        #burger-toggler div span,
-        #burger-toggler.collapsed div span {
-            width: 100%;
-            border: var(--bar-height) solid rgb(255, 255, 255);
-            transition: var(--bar-transition);
-            position: absolute;
-            border-radius: 10px;
-            left: 0;
-            box-sizing: border-box;
-        }
-
-        #burger-toggler.collapsed div span.bar-middle {
-            opacity: 1;
-        }
-
-        #burger-toggler div .bar-middle {
-            opacity: 0;
-        }
-
-
-        #burger-toggler div .bar-top {
-            top: 0;
-            transform: translateY(0%) rotate(0deg);
-            animation-duration: 0.3s;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes bar-top-forward {
-            50% {
-                top: 50%;
-                transform: translateY(-50%);
-            }
-
-            100% {
-                top: 50%;
-                transform: translateY(-50%) rotate(45deg);
-            }
-        }
-
-        @keyframes bar-top-backward {
-            0% {
-                top: 50%;
-                transform: translateY(-50%) rotate(45deg);
-            }
-
-            50% {
-                top: 50%;
-                transform: translateY(-50%) rotate(0deg);
-            }
-
-            100% {
-                top: 0%;
-                transform: translateY(0%) rotate(0deg);
-            }
-        }
-
-        #burger-toggler div .bar-bottom {
-            bottom: 0;
-            transform: translateY(0%) rotate(0deg);
-            animation-duration: 0.3s;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes bar-bottom-forward {
-            50% {
-                bottom: 50%;
-                transform: translateY(50%);
-            }
-
-            100% {
-                bottom: 50%;
-                transform: translateY(50%) rotate(-45deg);
-            }
-        }
-
-        @keyframes bar-bottom-backward {
-            0% {
-                bottom: 50%;
-                transform: translateY(50%) rotate(-45deg);
-            }
-
-            50% {
-                bottom: 50%;
-                transform: translateY(50%) rotate(0deg);
-            }
-
-            100% {
-                bottom: 0%;
-                transform: translateY(0%) rotate(0deg);
-            }
-        }
-
-        nav .dropdown {
-            width: 100%;
-            background-color: #ffffffef;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            text-align: right;
-            padding: 1rem;
-            display: none;
-            flex-wrap: wrap;
-            border-radius: 0 0 16px 16px;
-            opacity: 0;
-            pointer-events: none;
-            border: 2px solid var(--bg-gray1);
-            transition: 0.5s;
-        }
-
-        nav li:hover .dropdown {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        nav .dropdown p {
-            flex-basis: 50%;
-            padding: 0.5rem;
-            margin: 0;
-            font-weight: 600;
-            color: #383838;
-        }
-
-        @media(min-width : 1024px) {
-
-            nav .container .box>div,
-            nav .container .links ul {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            nav .container .box {
-                height: fit-content !important;
-                position: relative;
-                background-color: transparent;
-                backdrop-filter: blur(0px);
-                border-radius: 0;
-                padding: 0;
-                overflow: visible;
-            }
-
-            nav .container .box>div {
-                padding: 0;
-            }
-
-            nav .container .links ul {
-                margin: 0;
-            }
-
-            nav .container .links ul li a {
-                color: #fff;
-            }
-
-            nav .container .buttons {
-                margin: 0 auto 0 0;
-            }
-
-            #burger-toggler {
-                display: none;
-            }
-
-            nav .dropdown {
-                display: flex;
-            }
-        }
-
-        /* end nav */
-
-        /* start footer */
-
-        footer {
-            background-color: #b5b5b5;
-            padding: 1rem 0;
-            box-shadow: 0 0 5px 0 rgb(188, 188, 188);
-        }
-
-        footer .logo img {
-            width: 100px;
-        }
-
-        footer a {
-            text-decoration: none;
-        }
-
-        footer ul {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            column-gap: 40px;
-            text-align: right;
-            justify-content: center;
-            justify-items: center;
-            margin-bottom: 2rem !important;
-            font-size: 0.82rem;
-        }
-
-        footer .contact-us {
-            font-size: 0.82rem;
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        @media(min-width : 400px) {
-            footer .contact-us {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-        }
-
-        @media(min-width : 768px) {
-            footer ul {
-                grid-template-columns: repeat(2, auto);
-                justify-items: right;
-
-            }
-        }
-
-        footer ul li a {
-            display: inline-block;
-            transition: 0.3s;
-            right: 0;
-            position: relative;
-        }
-
-        footer ul li:hover a {
-            right: 5px;
-            color: #fff;
-        }
-
-
-        @media(min-width : 768px) {
-            footer .container>div:nth-child(1) {
-                display: flex;
-                border-bottom: 2px solid #000;
-                padding: 1rem;
-                justify-content: center;
-            }
-
-            footer .container>div:nth-child(1) .logo {
-                padding-left: 2rem;
-                border-left: 2px solid #000;
-            }
-
-            footer .container>div:nth-child(1)>div:nth-child(2) {
-                padding-right: 1rem;
-            }
-
-            footer .container>div:nth-child(2) {
-                padding-top: 1rem;
-            }
-        }
-
-        /* end footer */
-    </style>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/terms&conditions.css">
 
 
 </head>
@@ -950,83 +28,18 @@
 
 
     <div class="conditions">
-        <nav>
-            <div class="container">
-                <div class="links">
-                    <div class="logo">
-                        <a href="https://rsc.mped.gov.eg/">
-                            <img src="../assets/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="box overflow-hidden">
-                        <div>
-                            <ul class="list-unstyled w-fit text-center">
-                                <li>
-                                    <a href="../index.html" class="no-decoration">الصفحة الرئيسية</a>
-                                </li>
-                                <li>
-                                    <a href="FAQs.html" class="no-decoration">الأسئلة الشائعة</a>
-                                    <div class="dropdown">
-                                        <p>- ما هي المستندات المطلوبة لتقديم طلب رفع مساحي؟</p>
-                                        <p>- كيف أحدد مساحة العقار التي يتم كتابتها أثناء تقديم الطلب؟</p>
-                                        <p>- هل يمكن التقدم بطلب رفع مساحي لأكثر من عقار في نفس الطلب؟</p>
-                                        <p>- هل يلزم تقديم الطلبات بصفة شخصية؟</p>
-                                        <p>- هل المراكز التكنولوجيا بالمحافظة المكان الوحيد لتقديم الطلبات؟</p>
-                                        <p>- كيف يتم دفع رسوم الرفع المساحي؟</p>
-                                        <p>- هل يمكن استرداد المبلغ المدفوع في حال إتمام عملية الدفع؟</p>
-                                        <p>- هل يمكن اختيار المكتب الهندسي للرفع المساحي للعقار؟</p>
-                                        <p>- هل يمكن تغيير موعد الرفع المساحي؟</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="" class="no-decoration">الشكاوى</a>
-                                </li>
-                                <li>
-                                    <a href="contactUs.html" class="no-decoration">اتصل بنا</a>
-                                </li>
-                            </ul>
-                            <div class="buttons w-fit">
-                                <button>
-                                    <a href="" class="no-decoration">
-                                        <span>
-                                            <i class="fa-solid fa-clipboard"></i>
-                                        </span>
-                                        متابعة الطلبات
-                                    </a>
-                                </button>
-                                <button>
-                                    <a href="" class="no-decoration">
-                                        <span>
-                                            <i class="fa-solid fa-user"></i>
-                                        </span>
-                                        مستخدم
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button id="burger-toggler" class="navbar-toggler collapsed">
-                    <div id="burger-bar">
-                        <span class="bar-top "></span>
-                        <span class="bar-middle "></span>
-                        <span class="bar-bottom "></span>
-                    </div>
-                </button>
-            </div>
-        </nav>
-        <div class="about xy-center">
-            <div class="container">
-                <h1 class="text-center">بوابة المركز التكنولوجى للتسجيل المساحي العقاري</h1>
-                <h2 class=" text-center">الشروط وأحكام الاستخدام
+        <div class="about custom-xy-center">
+            <div class="custom-container">
+                <h1 class="custom-text-center">بوابة المركز التكنولوجى للتسجيل المساحي العقاري</h1>
+                <h2 class=" custom-text-center">الشروط وأحكام الاستخدام
                     للموقع الإلكتروني للمركز التكنولوجي للتسجيل المساحي العقاري
                 </h2>
-                <p class="text-center">عند قيامكم بزيارة الموقع الإلكتروني وقبولكم للشروط والبنود المبينة فيما يلى أدناه
+                <p class="custom-text-center">عند قيامكم بزيارة الموقع الإلكتروني وقبولكم للشروط والبنود المبينة فيما يلى أدناه
                     فأنتم ملزمون أمام القانون بالشروط والبنود المنصوص عليها في تلك الشروط والأحكام.</p>
-                <ul class="list-cards list-unstyled">
+                <ul class="list-cards custom-list-unstyled">
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#system" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#system" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-gear"></i>
                                 </span>
@@ -1035,8 +48,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#taxes" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#taxes" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-percent"></i>
                                 </span>
@@ -1045,8 +58,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#payment" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#payment" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-credit-card"></i>
                                 </span>
@@ -1055,8 +68,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#get-service" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#get-service" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-sliders"></i>
                                 </span>
@@ -1065,8 +78,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#responsibility" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#responsibility" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-shield-halved"></i>
                                 </span>
@@ -1075,8 +88,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#messages" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#messages" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-message"></i>
                                 </span>
@@ -1085,8 +98,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#law" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#law" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-scale-balanced"></i>
                                 </span>
@@ -1095,8 +108,8 @@
                         </div>
                     </li>
                     <li>
-                        <div class="inner text-center pointer">
-                            <a href="#general" class="no-decoration">
+                        <div class="inner custom-text-center custom-pointer">
+                            <a href="#general" class="custom-no-decoration">
                                 <span>
                                     <i class="fa-solid fa-flag"></i>
                                 </span>
@@ -1108,7 +121,7 @@
             </div>
         </div>
         <main>
-            <div class="container">
+            <div class="custom-container">
                 <div class="main-content">
                     <div class="page-box">
                         <section id="system" class="system">
@@ -1120,9 +133,9 @@
                                     التسجيل للحصول على الخدمة بإحدى الطرق الآتية
                                 </h4>
                                 <div class="tabs">
-                                    <ul class="controls list-unstyled">
-                                        <li class="text-center pointer active">إلكترونيا</li>
-                                        <li class="text-center pointer">ورقياً</li>
+                                    <ul class="controls custom-list-unstyled">
+                                        <li class="custom-text-center custom-pointer active">إلكترونيا</li>
+                                        <li class="custom-text-center custom-pointer">ورقياً</li>
                                     </ul>
                                     <div class="tabs-content">
                                         <div>
@@ -1164,11 +177,11 @@
                                     سداد تكاليف أعمال الرفع المساحي
                                 </h4>
                                 <p>يتم تقدير تكاليف أعمال الرفع المساحي طبقاً للاتي</p>
-                                <div class="row">
+                                <div class="custom-row">
                                     <div>
-                                        <div class="inner text-center pointer">
-                                            <div class="overflow-hidden">
-                                                <img src="../assets/وحدات سكنية.jpg" alt="">
+                                        <div class="inner custom-text-center custom-pointer">
+                                            <div class="custom-overflow-hidden">
+                                                <img src="assets/وحدات سكنية.jpg" alt="">
                                             </div>
                                             <h5>العقارات</h5>
                                             <table>
@@ -1200,9 +213,9 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="inner text-center pointer">
-                                            <div class="overflow-hidden">
-                                                <img src="../assets/اراض بالمتر.jpg" alt="">
+                                        <div class="inner custom-text-center custom-pointer">
+                                            <div class="custom-overflow-hidden">
+                                                <img src="assets/اراض بالمتر.jpg" alt="">
                                             </div>
                                             <h5>الأراضي المقاسة بالمتر المربع</h5>
                                             <table>
@@ -1234,9 +247,9 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="inner text-center pointer">
-                                            <div class="overflow-hidden">
-                                                <img src="../assets/اراض بالفدان.jpg" alt="">
+                                        <div class="inner custom-text-center custom-pointer">
+                                            <div class="custom-overflow-hidden">
+                                                <img src="assets/اراض بالفدان.jpg" alt="">
                                             </div>
                                             <h5>الأراضي المقاسة بالفدان</h5>
                                             <table>
@@ -1296,7 +309,7 @@
                                     <span>رابعاً:</span>
                                     تحديد ميعاد إجراء الرفع المساحي
                                 </h4>
-                                <div class="row">
+                                <div class="custom-row">
                                     <div>
                                         <ol>
                                             <li>يتم التواصل مع المواطن من خلال مركز خدمة العملاء للمركز التكنولوجي
@@ -1310,7 +323,7 @@
                                         </ol>
                                     </div>
                                     <div class="logo">
-                                        <img src="../assets/logo.png" alt="">
+                                        <img src="assets/logo.png" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -1374,9 +387,9 @@
                                 </ul>
                             </div>
                             <div class="system-seven">
-                                <ul class="list-cards list-unstyled">
+                                <ul class="list-cards custom-list-unstyled">
                                     <li>
-                                        <div class="inner text-center">
+                                        <div class="inner custom-text-center">
                                             <span>
                                                 <i class="fa-solid fa-phone fa-shake"></i>
                                             </span>
@@ -1385,7 +398,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="inner text-center">
+                                        <div class="inner custom-text-center">
                                             <span>
                                                 <i class="fa-solid fa-envelope"></i>
                                             </span>
@@ -1398,7 +411,7 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="inner text-center">
+                                        <div class="inner custom-text-center">
                                             <span>
                                                 <i class="fa-brands fa-whatsapp"></i>
                                             </span>
@@ -1414,7 +427,7 @@
                         <section id="taxes" class="taxes">
                             <h2>- رسوم خدمة الرفع المساحى</h2>
                             <h3>اللائحة</h3>
-                            <ul class="list-unstyled text-center">
+                            <ul class="custom-list-unstyled custom-text-center">
                                 <div>
                                     <li>
                                         لن يتم إستلام طلبات الرفع المساحي في المراكز التكنولوجية لخدمة المواطنين دون
@@ -1525,183 +538,9 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <div class="container text-center">
-                <div>
-                    <div class="logo">
-                        <img src="/assets/logo.png" alt="">
-                    </div>
-                    <div>
-                        <h3>بوابة المركز التكنولوجى للتسجيل المساحى العقارى</h3>
-                        <ul class="list-unstyled">
-                            <li class="w-fit">
-                                -
-                                <a href="" class="no-decoration" target="_blank">
-                                    الشروط والاحكام
-                                </a>
-                            </li>
-                            <li class="w-fit">
-                                -
-                                <a href="FAQs.html" class="no-decoration" target="_blank">
-                                    الأسئلة الشائعة
-                                </a>
-                            </li>
-                            <li class="w-fit">
-                                -
-                                <a href="newtable.html" class="no-decoration" target="_blank">
-                                    المراكز التكنولوجية لخدمة المواطنين
-                                </a>
-                            </li>
-                            <li class="w-fit">
-                                -
-                                <a href="prices.html" class="no-decoration" target="_blank">
-                                    تكاليف الرفع المساحى و مصاريف الشحن
-                                </a>
-                            </li>
-                            <li class="w-fit">
-                                -
-                                <a href="Table.html" class="no-decoration" target="_blank">
-                                    المدن الجديدة غير خاضعة للقانون
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div>
-                    <div class="contact-us">
-                        <div class="inner text-center">
-                            <span>
-                                <i class="fa-solid fa-phone fa-shake"></i>
-                            </span>
-                            <span>رقم التليفون</span>
-                            <p>0225476199</p>
-                        </div>
-                        <div class="inner text-center">
-                            <span>
-                                <i class="fa-solid fa-envelope"></i>
-                            </span>
-                            <span>
-                                البريد الإلكتروني
-                            </span>
-                            <p>
-                                <a href="mailto:rsc@mped.gov.eg">rsc@mped.gov.eg</a>
-                            </p>
-                        </div>
-                        <div class="inner text-center">
-                            <span>
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </span>
-                            <span>
-                                رقم الواتس اب
-                            </span>
-                            <p>01273377445</p>
-                        </div>
-                    </div>
-                    <p class="text-center">جميع الحقوق محفوظة © ٢٠٢٢</p>
-                </div>
-
-
-
-            </div>
-        </footer>
     </div>
 
-    <span class="arrow-up xy-center pointer">
-        <i class="fa-solid fa-arrow-up"></i>
-    </span>
-
-    <script>
-        // handle nav bar
-
-        const burgerBar = document.getElementById('burger-bar');
-        const burgerToggler = document.getElementById('burger-toggler');
-        const nav = document.querySelector('nav');
-        const navBox = document.querySelector('nav .container .box');
-        const navLinks = document.querySelectorAll('nav .container .links ul li a');
-
-        burgerToggler.onclick = function () {
-            if (!this.classList.contains('collapsed')) {
-                burgerBar.children[0].style.setProperty('animation-name', 'bar-top-backward');
-                burgerBar.children[2].style.setProperty('animation-name', 'bar-bottom-backward');
-                navBox.style.setProperty('height', '0');
-                this.classList.add('collapsed');
-            }
-            else {
-                burgerBar.children[0].style.setProperty('animation-name', 'bar-top-forward');
-                burgerBar.children[2].style.setProperty('animation-name', 'bar-bottom-forward');
-                navBox.style.setProperty('height', `${navBox.scrollHeight}px`);
-                this.classList.remove('collapsed');
-            }
-        }
-
-        window.addEventListener('scroll', function () {
-            if (this.scrollY) {
-                nav.style.setProperty('background-color', '#fff');
-                for (let i = 0; i < burgerBar.children.length; i++) {
-                    burgerBar.children[i].style.setProperty('border-color', '#000')
-                }
-                for (let i = 0; i < navLinks.length; i++) {
-                    navLinks[i].style.setProperty('color', '#000');
-                }
-            }
-            else {
-                nav.style.setProperty('background-color', 'transparent');
-                for (let i = 0; i < burgerBar.children.length; i++) {
-                    burgerBar.children[i].style.setProperty('border-color', '#fff')
-                }
-                for (let i = 0; i < navLinks.length; i++) {
-                    navLinks[i].style.setProperty('color', '#fff');
-                }
-            }
-        });
-
-        window.addEventListener('resize', function () {
-            if (!burgerToggler.classList.contains('collapsed') && this.innerWidth >= 640) {
-                burgerToggler.click();
-            }
-        });
-
-
-        //--------------------------------------------------------------------------------------------------------
-
-        //handle nav & tabs in conditions
-
-        const tabs = document.querySelectorAll('.conditions .system .tabs >  .controls li');
-        const tabsContent = document.querySelectorAll('.conditions .system .tabs .tabs-content> div');
-
-
-        tabs.forEach((elem, i) => {
-            elem.addEventListener('click', function () {
-                if (!elem.classList.contains('active')) {
-                    for (let i = 0; i < tabsContent.length; i++) {
-                        tabsContent[i].style.cssText = `opacity: 0;
-                                                pointer-events: none;`;
-                        tabs[i].classList.remove('active');
-                    }
-                    tabsContent[i].style.cssText = `opacity: 1;
-            pointer-events: all;`;
-                    tabs[i].classList.add('active');
-                }
-            })
-        })
-
-        //---------------------------------------------------------------------------------------------------------------
-
-
-        // handle arrow up
-
-        const arrow = document.querySelector('.arrow-up');
-
-        arrow?.addEventListener('click', function () {
-            window.scrollTo(0, 0);
-        })
-
-
-        //--------------------------------------------------------------------------------------------------------------
-
-    </script>
-
-    <!-- <script src="../js/main.js"></script> -->
+    <script src="../js/main.js"></script>
 
 </body>
 

@@ -14,295 +14,8 @@
     <link rel="stylesheet" href="../css/all.min.css">
     <!-- end font awesome -->
 
-    <!-- <link rel="stylesheet" href="../css/main.css"> -->
-
-    <style>
-        body {
-            margin: 0;
-        }
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            scroll-padding-top: 6.5625rem;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p {
-            margin-top: 0;
-        }
-
-        :root {
-            font-family: "Noto Kufi Arabic", sans-serif !important;
-            --default-padding: 1.5rem;
-            direction: rtl;
-            --bg-gray1: #777777;
-        }
-
-        /*start custom classes */
-
-        .container {
-            margin: auto;
-            padding: 0rem calc(var(--default-padding) / 2);
-        }
-
-        @media(min-width : 640px) {
-            .container {
-                max-width: 640px;
-            }
-        }
-
-        @media(min-width : 768px) {
-            .container {
-                max-width: 768px;
-            }
-        }
-
-        @media(min-width : 1024px) {
-            .container {
-                max-width: 1024px;
-            }
-        }
-
-        @media(min-width : 1280x) {
-            .container {
-                max-width: 1280px;
-            }
-        }
-
-        .w-100 {
-            width: 100%;
-        }
-
-        .w-fit {
-            width: fit-content;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .no-decoration {
-            text-decoration: none;
-            color: #000;
-        }
-
-        .overflow-hidden {
-            overflow: hidden;
-        }
-
-        .list-unstyled {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .pointer {
-            cursor: pointer;
-        }
-
-        .specical-heading {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: calc(-1*var(--default-padding)) calc(var(--default-padding) / -2) 0rem calc(var(--default-padding) / -2);
-            justify-content: center;
-        }
-
-        .row>* {
-            padding: 0 calc(var(--default-padding) / 2);
-            margin-top: var(--default-padding);
-        }
-
-        .xy-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* end custom classes */
-
-        body>div {
-            background-color: #cccccc52;
-        }
-
-        .page-box>section {
-            padding: 1rem 0;
-        }
-
-        .main-content {
-            padding: 3rem 0;
-        }
-
-        .page-box {
-            border-radius: 1rem;
-            background-color: #fff;
-            padding: 1rem;
-        }
-
-        /* start registeration & email */
-
-        .registeration,
-        .email {
-            min-height: 100vh;
-        }
-
-        .registeration .head,
-        .email .head {
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .registeration .head::before,
-        .email .head::before {
-            content: '';
-            position: absolute;
-            width: 80%;
-            border: 1.5px solid;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .registeration .head h1,
-        .email .head h1 {
-            width: 70%;
-            font-size: 1rem;
-        }
-
-        .registeration .logo img,
-        .email .logo img {
-            width: 60px;
-        }
-
-        @media(min-width : 640px) {
-
-            .registeration .head h1,
-            .email .head h1 {
-                font-size: 1.5rem;
-            }
-
-            .registeration .logo img,
-            .email .logo img {
-                width: 90px;
-            }
-        }
-
-        .registeration .content,
-        .email .content {
-            padding: 3rem 0;
-        }
-
-        .registeration .content h2,
-        .email .content h2 {
-            font-size: 1.2rem;
-            background-color: #dadada7a;
-            border-radius: 4px;
-            padding: 0.5rem;
-            box-shadow: 0 0 5px 0 #ccc;
-        }
-
-        .registeration .content p {
-            margin-bottom: 2rem;
-            color: #383838;
-        }
-
-        .registeration .content p a {
-            color: red;
-            font-weight: 700;
-        }
-
-        .registeration .content div {
-            margin-right: auto;
-        }
-
-        .registeration .content h3,
-        .email .content h3 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .registeration .content h4 {
-            color: #383838;
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        @media(min-width : 640px) {
-
-            .registeration .content h2,
-            .email .content h2 {
-                font-size: 1.5rem !important;
-            }
-
-            .registeration .content h3,
-            .email .content h3 {
-                font-size: 1.5rem;
-            }
-
-            .registeration .content h4 {
-                font-size: 1.2rem;
-            }
-        }
-
-        .registeration .tail,
-        .email .tail {
-            font-weight: 700;
-            font-size: 2rem;
-            border-top: 2px solid;
-            padding-top: 2rem;
-        }
-
-        .registeration .tail img,
-        .email .tail img {
-            width: 45px;
-        }
-
-        .registeration .tail p,
-        .email .tail p {
-            margin-bottom: 0;
-            font-size: 1.5rem;
-        }
-
-        .email .content .green {
-            color: green;
-            font-weight: 700;
-        }
-
-        .email .content div {
-            width: 80%;
-            border: 2px solid black;
-            border-radius: 8px;
-            padding: 1rem;
-            margin: auto;
-        }
-
-        .email .content div p:last-child {
-            border-top: 2px solid;
-            margin: 0;
-            padding: 1rem;
-        }
-
-        .email .content label {
-            font-size: 1.2rem;
-        }
-
-        /* end registeration & email */
-    </style>
-
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/RegisterationEmail.css">
 
 </head>
 
@@ -310,22 +23,22 @@
 
     <div class="registeration ">
         <main>
-            <div class="container">
+            <div class="custom-container">
                 <div class="main-content">
                     <div class="page-box">
-                        <div class="head row">
+                        <div class="head custom-row">
                             <h1>بوابة المركز التكنولوجى للتسجيل المساحي العقاري</h1>
                             <div class="logo">
-                                <img src="../assets/logo.png" alt="">
+                                <img src="assets/logo.png" alt="">
                             </div>
                         </div>
                         <div class="content">
-                            <h2 class="w-fit">مرحبا #UserName#</h2>
+                            <h2 class="custom-w-fit">مرحبا #UserName#</h2>
                             <p>يسعدنا تسجيلك في بوابة المركز التكنولوجي للتسجيل المساحي العقاري
                                 لإتمام عملية التسجيل قم بتأكيد حسابك بالضغط على <a href='#Link#'> الرابط هذا</a> حتى
                                 تتمكن من إنشاء طلبات الرفع المساحي.
                             </p>
-                            <div class="w-fit">
+                            <div class="custom-w-fit">
                                 <h3>
                                     أطيب التحيات
                                 </h3>
@@ -334,8 +47,8 @@
                                 </h4>
                             </div>
                         </div>
-                        <div class="tail text-center">
-                            <img src="../assets/Egypt Eagle.png" alt="">
+                        <div class="tail custom-text-center">
+                            <img src="assets/Egypt Eagle.png" alt="">
                             <p class="">
                                 جمهورية مصر العربية
                             </p>

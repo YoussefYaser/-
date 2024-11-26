@@ -1,0 +1,381 @@
+/* start conditions */
+
+.conditions .page-box>section {
+    border-bottom: 2px solid black;
+}
+
+.conditions .page-box>section>h3 {
+    color: var(--bg-gray1);
+}
+
+.conditions .about {
+    background: linear-gradient(#000000a0, #000),
+        url('../src/assets/الرفع\ المساحي.jpg');
+    background-size: cover;
+    color: #fff;
+    padding: 6.5625rem 0 2rem;
+}
+
+.conditions .about .custom-container>p {
+    font-weight: 300;
+    margin: auto;
+}
+
+@media(min-width : 500px) {
+    .conditions .about .custom-container>p {
+        width: 60%;
+    }
+}
+
+.list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.list-cards li {
+    flex-basis: 50%;
+    padding: 0.5rem;
+}
+
+.list-cards li .inner {
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.list-cards li .inner a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.list-cards li .inner:hover {
+    background-color: #fff;
+}
+
+.list-cards li .inner:hover a {
+    color: #000;
+}
+
+.list-cards li .inner span {
+    font-size: 1.5rem;
+}
+
+@media(min-width : 480px) {
+    .list-cards li {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+@media(min-width : 600px) {
+    .list-cards li {
+        flex-basis: calc(100% / 4);
+    }
+}
+
+@media(min-width : 1024px) {
+    .conditions .about {
+        height: 100vh;
+    }
+}
+
+/* start system */
+
+.conditions .system>div {
+    margin-bottom: 2rem;
+}
+
+.conditions .custom-container>h2 {
+    font-weight: 300;
+}
+
+.conditions .page-box .system h4 {
+    font-size: 1rem;
+    color: #383838;
+}
+
+.conditions .page-box .system h4 span {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.conditions .about .custom-container>p {
+    color: #e6e6e6;
+}
+
+@media(min-width : 640px) {
+    .conditions .about .custom-container>p {
+        width: 60%;
+    }
+}
+
+.conditions .system .tabs>.controls {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto 1rem;
+}
+
+.conditions .system .tabs>.controls li {
+    width: 4.7rem;
+    margin: 0 0.5rem;
+    background-color: #8d8d8d;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.conditions .system .tabs>.controls li:hover,
+.conditions .system .tabs>.controls li.active {
+    background-color: #009EF7;
+    transform: scale(1.2);
+}
+
+.conditions .system .tabs .tabs-content {
+    position: relative;
+    border: 3px solid rgb(87, 87, 87);
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0 #ccc;
+}
+
+.conditions .system .tabs .tabs-content>div {
+    padding: 1rem;
+    transition: 0.3s;
+}
+
+.conditions .system .tabs .tabs-content>div:nth-child(1) {
+    position: relative;
+}
+
+.conditions .system .tabs .tabs-content li {
+    margin-bottom: 1rem;
+}
+
+.conditions .system .tabs .tabs-content>div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.system-second>p:nth-of-type(1) {
+    color: #616161;
+}
+
+.system-second .inner img {
+    width: 100%;
+    aspect-ratio: 800 / 449;
+    display: block;
+    transition: 0.5s;
+}
+
+.system-second .inner>div {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.system-second .inner>div:hover img {
+    transform: scale(1.1);
+}
+
+.system-second .inner h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+.system-second .inner {
+    flex-basis: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(150deg, #dfdfdf, #f5f5f573);
+    border-radius: 8px;
+    position: relative;
+    padding: 0.5rem;
+    box-shadow: 0 0 2px 0 rgb(231, 231, 231);
+    transition: 0.3s;
+}
+
+.system-second .inner:hover {
+    transform: scale(1.05);
+    background: linear-gradient(150deg, #dfdfdf00, #f5f5f500);
+    background-color: #616161;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0 20px 5px #a3a3a3;
+}
+
+.system-second .inner table {
+    width: 100%;
+    font-size: 0.85rem;
+}
+
+.system-second .inner table tbody {
+    color: #616161;
+    transition: 0.3s;
+}
+
+.system-second .inner:hover table tbody {
+    color: #fff;
+}
+
+.system-second .custom-row {
+    margin-bottom: 2rem;
+}
+
+@media(min-width : 768px) {
+    .system-second .inner {
+        padding: 1rem;
+    }
+
+    .system-second .custom-row>div {
+        flex-basis: 50%;
+    }
+}
+
+.system-second>p:nth-of-type(2) {
+    font-weight: 700;
+    position: relative;
+}
+
+.system-second>p:nth-of-type(2)::before {
+    content: '';
+    width: 30%;
+    position: absolute;
+    border: 1px solid var(--bg-gray1);
+    border-radius: 50px;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.conditions .system .system-third ul li {
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+.conditions .system .system-four .custom-row {
+    justify-content: center;
+}
+
+.conditions .system .system-four .custom-row .logo {
+    width: 40%;
+}
+
+.conditions .system .system-four .custom-row .logo img {
+    width: 100%;
+}
+
+.conditions .system .system-four .custom-row>div:nth-of-type(1) {
+    color: #616161;
+    margin-top: 0;
+}
+
+@media(min-width : 768px) {
+    .conditions .system .system-four .custom-row {
+        justify-content: space-between;
+    }
+
+    .conditions .system .system-four .custom-row>div:nth-of-type(1) {
+        width: calc(100% - 40%);
+    }
+
+    .conditions .system .system-four .custom-row .logo {
+        width: 25%;
+    }
+}
+
+.conditions .system .system-five ol li span {
+    margin: 0 0.5rem 0 0.25rem;
+}
+
+.conditions .system .system-five ol li:nth-of-type(1) span {
+    color: #FFC700;
+}
+
+.conditions .system .system-five ol li:nth-of-type(2) span {
+    color: #47c47f;
+}
+
+.conditions .system .system-five ol li:nth-of-type(3) span {
+    color: #F1416C;
+}
+
+.conditions .system .system-five ol li:nth-of-type(4) span {
+    color: #009EF7;
+}
+
+.conditions .system .system-five ol li {
+    margin-bottom: 1rem;
+}
+
+.conditions .system .system-five ol li p {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.conditions .system .system-six ul li {
+    color: #616161;
+    margin-bottom: 1rem;
+}
+
+.system-seven .list-cards li {
+    flex-basis: 100%;
+}
+
+@media(min-width : 768px) {
+    .system-seven .list-cards li {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+.system-seven .list-cards li .inner {
+    border-color: #383838;
+    background-color: #CCCCCC;
+    box-shadow: 0 0 5px 0 #ccc;
+    border-radius: 4px;
+}
+
+.system-seven .list-cards li span:nth-of-type(1) {
+    font-size: 2rem;
+}
+
+.system-seven .list-cards li p {
+    color: #383838;
+}
+
+/* end system */
+
+/* start taxes */
+
+.conditions .taxes>ul {
+    background-image: linear-gradient(#00000064, #00000087),
+        url('../src/assets/رفع\ مساحي.webp');
+    background-size: cover;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.conditions .taxes>ul>div {
+    backdrop-filter: blur(2px);
+    padding: 1rem;
+}
+
+.conditions .taxes>ul li {
+    margin-bottom: 3rem;
+}
+
+/* end taxes */
+
+/* end conditions */
+

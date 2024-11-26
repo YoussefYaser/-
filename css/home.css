@@ -1,0 +1,312 @@
+/* start home */
+
+/* start about */
+
+.home main .about {
+    background-image:
+        url('../src/assets/سكن\ مصر.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh;
+    animation-name: slides;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.home main .about .overlay {
+    height: 100%;
+    background: linear-gradient(#0000002e, #000000e5);
+}
+
+@keyframes slides {
+    50% {
+        background-image: url('../src/assets/El-Alamein_temp.webp');
+    }
+}
+
+@media(min-width : 640px) {
+    .home main .about h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.home main .about p {
+    display: none;
+    font-weight: 300;
+    margin: 0 auto 2rem;
+    font-size: 0.75rem;
+}
+
+@media(min-width : 640px) {
+    .home main .about p {
+        width: 80%;
+        display: block;
+        font-size: 0.9rem;
+    }
+}
+
+.home main .about .buttons {
+    width: fit-content;
+    margin: auto;
+}
+
+.home main .about .buttons button {
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.home main .about .buttons:hover button {
+    filter: blur(1px);
+}
+
+.home main .about .buttons button:hover {
+    filter: blur(0px);
+    transform: scale(1.1);
+}
+
+.home main .about .buttons button:nth-child(1) {
+    background-color: #000;
+    border: 2px solid #fff;
+}
+
+.home main .about .buttons button:nth-child(2) {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+/* end about */
+
+/* start services */
+.home main section:not(.home main section:last-of-type) {
+    border-bottom: 2px solid #ccc;
+}
+
+.home main .services .services-list .custom-row {
+    justify-content: space-evenly;
+}
+
+.home main .services .services-list .custom-row .service-card {
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+.home main .services-list .inner {
+    width: 220px;
+    height: 220px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #9f9f9f;
+    background-image: linear-gradient(#0000006e, #0000007b),
+        url('../assets/وحدات\ سكنية.jpg');
+    background-clip: content-box;
+    border: 5px solid #CCCCCC;
+    box-shadow: 0 0 5px 0 #CCCCCC;
+    transition: 0.3s;
+}
+
+.home main .services-list .service-card .service-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #0000006e;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.home main .services-list .inner:hover .service-overlay {
+    opacity: 0;
+}
+
+.home main .services-list .service-card .inner h3,
+.home main .services-list .service-card .inner h4 {
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.home main .services-list .service-card .inner h4 {
+    margin-bottom: 0.5rem;
+}
+
+.home main .services-list .service-card .inner:hover h3 {
+    transform: translateX(50%) scale(0);
+}
+
+.home main .services-list .service-card .inner .back p {
+    font-size: 10px;
+}
+
+.home main .services-list .inner:hover {
+    border-radius: 30px;
+    transform: scale(1.2);
+    border: 5px solid transparent;
+    box-shadow: none;
+}
+
+.home main .services-list .front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.home main .services-list .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.home main .services-list .inner:hover .front img {
+    opacity: 0;
+}
+
+.home main .services-list .back {
+    height: 100%;
+    padding: 1rem;
+    color: #fff;
+    opacity: 0;
+    transform: translateX(70%);
+    transition: 0.3s;
+}
+
+.home main .services-list .inner:hover .back {
+    opacity: 1;
+    transform: translateX(0%);
+    backdrop-filter: blur(10px);
+}
+
+.home main .services .services-list .service-card .inner img {
+    aspect-ratio: 800 / 449;
+}
+
+@media(min-width : 500px) {
+    .home main .services-list .inner {
+        width: 280px;
+        height: 280px;
+    }
+
+    .home main .services-list .service-card .inner h3,
+    .home main .services-list .service-card .inner h4 {
+        font-size: 16px;
+    }
+
+    .home main .services-list .service-card .inner .back p {
+        font-size: 12px;
+    }
+}
+
+@media(min-width : 1024px) {
+    .home main .services .services-list .service-card {
+        width: calc(100% / 3);
+    }
+}
+
+.home main .services .services-details {
+    width: 40%;
+    margin: auto;
+}
+
+/* end services */
+
+/* start steps */
+
+.home main .steps .custom-row>div {
+    flex-basis: 100%;
+    opacity: 0;
+    position: relative;
+    top: 60px;
+    transition: opacity 0.5s, top 0.5s;
+}
+
+.home main .steps .custom-row>div .inner {
+    flex-basis: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: linear-gradient(150deg, #dfdfdf, #f5f5f573);
+    border-radius: 8px;
+    position: relative;
+    padding: 1rem;
+    box-shadow: 0 0 2px 0 rgb(231, 231, 231);
+    transition: 0.3s;
+}
+
+.home main .steps .custom-row>div .inner:hover {
+    transform: scale(1.1);
+    background: linear-gradient(150deg, #dfdfdf00, #f5f5f500);
+    background-color: #616161;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0 20px 5px #a3a3a3;
+
+}
+
+.home main .steps .custom-row>div .inner span {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    order: 1;
+    background-color: rgba(189, 189, 189, 0.615);
+    border: 4px solid #fff;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.153);
+    transition: 0.1s;
+}
+
+.home main .steps .custom-row>div .inner:hover span {
+    background-color: #141414;
+}
+
+.home main .steps .custom-row>div .inner p {
+    order: 3;
+    margin: 0;
+}
+
+.home main .steps .custom-row>div .inner::after {
+    content: attr(data-index);
+    order: 2;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media(min-width : 768px) {
+    .home main .steps .custom-row>div {
+        flex-basis: 50%;
+    }
+}
+
+@media(min-width : 1024px) {
+    .home main .steps .custom-row>div {
+        flex-basis: calc(100% / 3);
+    }
+}
+
+/* end steps */
+
+/* start video */
+
+.home main .video video {
+    width: 100%;
+    border-radius: 20px 4px 20px 4px;
+    box-shadow: 0 0 10px 0 gray;
+    transform: scaleX(0);
+    transition: 0.5s;
+}
+
+/* end video */
+
+/* end home */
+
+
+
