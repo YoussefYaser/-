@@ -1,6 +1,7 @@
-- change points
+<h1>- change points</h1>
 -------------------------------------------
-1- Extract all the internal styles in html to external styles sheets.
+
+<h5>1- Extract all the internal styles in html to external styles sheets.</h5>
 
 
 index.html ==> home.css ==> الصفحة الرئيسية
@@ -13,10 +14,10 @@ EmailTemplate.html ==> EmailTemplate.css ==> رسالة تسجيل الطلب
 contactUs.html ==> contactUs.css ==> اتصل بنا
 citizenServices.html ==> citizenServices.css ==> المراكز التكنولوجية لخدمة المواطنين
 
-2- create external style sheets for nav and footer.
+<h5>2- create external style sheets for nav and footer.</h5>
 
-3- Handling redundant nav, footer and arrow-up html code with js.
+<h5>3- Handling redundant nav, footer and arrow-up html code with js.</h5>
 
-4- Change the reserved classes like container, w-100, ... with prefix-custom
+<h5>4- Change the reserved classes like container, w-100, ... with prefix-custom</h5>
 
-5- Main.css has the custom classes, arrow-up styles and reseting default browser styles.
+<h5>5- Main.css has the custom classes, arrow-up styles and reseting default browser styles.</h5>
